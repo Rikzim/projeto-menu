@@ -198,9 +198,9 @@ while op_menu in ("s","S","Sim","sim"):
       #----- 
 
       #----- pergunta 3
-      print("QUAL O NICKNAME DO FELIPE?")
-      questao_1 = int(input("1 - FELIPEDAMIRA \n2 - FAPO \n3 - FYPE \n:"))
-      if questao_1 == 1:
+      print("OQUE O DESTROYER É ")
+      questao_1 = int(input("1 - GAY \n2 - CORNO \n3 - AGIOTA \n:"))
+      if questao_1 == 2:
         os.system('cls')
         print("RESPOSTA CORRETA!")
         t.sleep(2)
