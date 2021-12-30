@@ -1,4 +1,7 @@
+# @author Rikzim
+
 # Bibliotecas utilizadas
+
 import time as t
 import os 
 import sys as s 
@@ -8,12 +11,12 @@ import random as r
 
 def jogo_advinha():
     #----
+    os.system('cls')
     for i in range (3):
-      os.system('cls')
       print("="*30)
       print("\tJOGO DO ADVINHA")
       print("="*30)
-      print("Carregando.")
+      print("\tCarregando.")
       t.sleep(0.5)
       os.system('cls')
 
@@ -21,7 +24,7 @@ def jogo_advinha():
       print("="*30)
       print("\tJOGO DO ADVINHA")
       print("="*30)
-      print("Carregando..")
+      print("\tCarregando..")
       t.sleep(0.5)
       os.system('cls')
 
@@ -29,7 +32,7 @@ def jogo_advinha():
       print("="*30)
       print("\tJOGO DO ADVINHA")
       print("="*30)
-      print("Carregando...")
+      print("\tCarregando...")
       t.sleep(0.5)
       os.system('cls')
     #----  
@@ -85,16 +88,9 @@ def jogo_advinha():
 
     #-----
     os.system('cls')
-    print("Clique para voltar ao menu inicial")
-    op_menu = input("(Enter): ")
+    input("Pressione (ENTER) para voltar ao menu:")
     os.system('cls')
-
- 
-      
-      
-      
-
-
+#-------------
 def loading():
   for i in range (3):
     print("Carregando.")
@@ -105,9 +101,28 @@ def loading():
     os.system('cls')
     print("Carregando...")
     t.sleep(0.5)
-    os.system('cls')
-    
-
+    os.system('cls')   
+#-------------
+def win():
+  os.system("cls")
+  print("="*30)
+  print("\t RESPOSTA CORRETA!")
+  print("="*30)
+  print(f"GANHASTE +1 PONTOS NESSA PERGUNTA.")
+  print("="*30)
+  t.sleep(1)
+  os.system('cls')
+#-------------
+def lose():
+  os.system("cls")
+  print("="*30)
+  print("\t RESPOSTA ERRADA!")
+  print("="*30)
+  print(f"NÃO GANHASTE NEHUM PONTO NESTA PERGUNTA.")
+  print("="*30)
+  t.sleep(1.5)
+  os.system('cls')
+#------------
 
 
 # codigo todo
@@ -117,7 +132,7 @@ while op_menu in ("s","S","Sim","sim"):
   os.system('cls')
   #----
   print("="*25)
-  print("\t  MENU INICIAL")
+  print("=      MENU INICIAL     =")
   print("="*25)
   print("= 1 |  JOGO DO ADVINHA  =")
   print("="*25)
@@ -130,31 +145,33 @@ while op_menu in ("s","S","Sim","sim"):
   #----
 
   if op == 1:
+    os.system('color 0C')
     jogo_advinha()
   if op == 2:
     #----
+    os.system('color 09')
+    os.system('cls')
     for i in range (3):
-      os.system('cls')
       print("="*25)
-      print("\tQUIZ INFORMATICA")
+      print("     QUIZ INFORMATICA")
       print("="*25)
-      print("Carregando.")
+      print("\tCarregando.")
       t.sleep(0.5)
       os.system('cls')
 
       
       print("="*25)
-      print("\tQUIZ INFORMATICA")
+      print("     QUIZ INFORMATICA")
       print("="*25)
-      print("Carregando..")
+      print("\tCarregando..")
       t.sleep(0.5)
       os.system('cls')
 
       
       print("="*25)
-      print("\tQUIZ INFORMATICA")
+      print("     QUIZ INFORMATICA")
       print("="*25)
-      print("Carregando...")
+      print("\tCarregando...")
       t.sleep(0.5)
       os.system('cls')
     #----
@@ -164,121 +181,111 @@ while op_menu in ("s","S","Sim","sim"):
     pontos = 0 
     while op_game_2 in("s","S","sim","SIM","Sim"):
       #----- pergunta 1
-      print("QUAL O NICKNAME DO FELIPE?")
-      questao_1 = int(input("1 - FELIPEDAMIRA \n2 - FAPO \n3 - FYPE \n:"))
+      print("Qual é a linguagem de programação mais utilizada?")
+      questao_1 = int(input("1 - JAVASCRIPT \n2 - JAVA \n3 - PYTHON \n:"))
       if questao_1 == 1:
-        os.system('cls')
-        print("RESPOSTA CORRETA!")
-        t.sleep(2)
-        pontos +=1
-        os.system('cls')
-
+        pontos += 1
+        win()
       else:
-        os.system('cls')
-        print("RESPOSTA ERRADA!") 
-        t.sleep(2)
-        os.system('cls')
+        lose()
       #-----
 
       #----- pergunta 2
       os.system('cls')
-      print("BEAN É NOOB ?")
-      questao_1 = int(input("1 - SIM \n2 - COM CERTEZA \n3 - CLARO \n:"))  
-      if questao_1 == 2:
+      print("Oque é essecial para desenvolvimento Web?")
+      questao_2 = int(input("1 - PYTHON \n2 - CSS \n3 - HTML \n:"))  
+      if questao_2 == 2 or 3:
         os.system('cls')
-        print("RESPOSTA CORRETA!")
-        t.sleep(2)
-        os.system('cls')
-        pontos+=1
+        pontos += 1
+        win()
+
       else:
-        os.system('cls')
-        print("RESPOSTA ERRADA!")
-        t.sleep(2)
-        os.system('cls')
+        lose()
       #----- 
 
       #----- pergunta 3
-      print("OQUE O DESTROYER É ")
-      questao_1 = int(input("1 - GAY \n2 - CORNO \n3 - AGIOTA \n:"))
-      if questao_1 == 2:
-        os.system('cls')
-        print("RESPOSTA CORRETA!")
-        t.sleep(2)
-        pontos +=1
-        os.system('cls')
+      print("Qual é a linguagem mais antiga?")
+      questao_3 = int(input("1 - ASSEMBLY \n2 - LINGUAGEM C \n3 - LINGUAGEM C++ \n:"))
+      if questao_3 == 1:
+        pontos += 1
+        win()
 
       else:
-        os.system('cls')
-        print("RESPOSTA ERRADA!") 
-        t.sleep(2)
-        os.system('cls')
+        lose()
       #-----
 
       #----- pergunta 4 
-      print("QUAL O NICKNAME DO FELIPE?")
-      questao_1 = int(input("1 - FELIPEDAMIRA \n2 - FAPO \n3 - FYPE \n:"))
-      if questao_1 == 1:
-        os.system('cls')
-        print("RESPOSTA CORRETA!")
-        t.sleep(2)
-        pontos +=1
-        os.system('cls')
+      print("Qual é a linguagem mais utilizada em desevolvimento de jogos?")
+      questao_4 = int(input("1 - C# \n2 - PYTHON \n3 - C++ \n:"))
+      if questao_4 == 3:
+        pontos += 1
+        win()
 
       else:
-        os.system('cls')
-        print("RESPOSTA ERRADA!") 
-        t.sleep(2)
-        os.system('cls')
+        lose()
+      #-----
+
+      #-----
+      print("="*25)
+      print("PERGUNTA FINAL!")
+      print("="*25)
+      t.sleep(1.2)
+      os.system('cls')
       #-----
 
       #----- pergunta 5
-      print("QUAL O NICKNAME DO FELIPE?")
-      questao_1 = int(input("1 - FELIPEDAMIRA \n2 - FAPO \n3 - FYPE \n:"))
-      if questao_1 == 1:
-        os.system('cls')
-        print("RESPOSTA CORRETA!")
-        t.sleep(2)
-        pontos +=1
-        os.system('cls')
+      print("Qual é a linguagem mais facíl de se aprender?")
+      questao_5 = int(input("1 - C# \n2 - JAVASCRIPT \n3 - PYTHON \n:"))
+      if questao_5 == 3:
+        pontos += 1
+        win()
         break
 
       else:
-        os.system('cls')
-        print("RESPOSTA ERRADA!") 
-        t.sleep(2)
-        os.system('cls')
+        lose()
         break
-        #--------
+      #-----
 
+    #------  
+    os.system("cls")
+    print("="*30)
+    print("\t FIM DO QUIZ!")
+    print("="*30)
+    print(f"GANHASTE {pontos} NESTE QUIZ!")
+    print("="*30)
+    t.sleep(2)
+    print("JOGUE COM OS TEUS AMIGOS E VEJA VOSSA PONTUAÇÃO!")
+    t.sleep(2)
+    #------
 
-      
-    print(f"Voçê fez {pontos} pontos!!")
-    input("pressiona enter")
-
+    #------
+    os.system('cls')
+    input("Pressione (ENTER) para voltar ao menu:")
+    os.system('cls')
+    #------    
   if op == 3:
     #----
+    os.system('color 0D')
+    os.system('cls')
     for i in range (3):
-      os.system('cls')
       print("="*25)
-      print("\tADVINHE A TABUADA")
+      print("    ADVINHE A TABUADA")
       print("="*25)
-      print("Carregando.")
+      print("\tCarregando.")
       t.sleep(0.5)
       os.system('cls')
 
-      
       print("="*25)
-      print("\tADVINHE A TABUADA")
+      print("    ADVINHE A TABUADA")
       print("="*25)
-      print("Carregando..")
+      print("\tCarregando..")
       t.sleep(0.5)
       os.system('cls')
 
-      
       print("="*25)
-      print("\tADVINHE A TABUADA")
+      print("    ADVINHE A TABUADA")
       print("="*25)
-      print("Carregando...")
+      print("\tCarregando...")
       t.sleep(0.5)
       os.system('cls')
     #----
@@ -330,3 +337,9 @@ while op_menu in ("s","S","Sim","sim"):
     input("Pressione (ENTER) para voltar ao menu:")
     os.system('cls')
     #----
+  else:
+    os.system('cls')
+    print("ERRO =/ ")
+    print("Voltando ao menu inicial")
+    t.sleep(2)
+    os.system('cls')
