@@ -343,3 +343,4 @@ while op_menu in ("s","S","Sim","sim"):
     print("Voltando ao menu inicial")
     t.sleep(2)
     os.system('cls')
+    #--------
