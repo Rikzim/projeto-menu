@@ -71,6 +71,7 @@ def jogo_advinha():
         elif num < num_alea:
           print("O número no qual inseriu é menor!")
           tentativa +=1
+          
     #-----
 
       #-----
@@ -108,7 +109,7 @@ def win():
   print("="*30)
   print("\t RESPOSTA CORRETA!")
   print("="*30)
-  print(f"GANHASTE +1 PONTOS NESSA PERGUNTA.")
+  print("         +1 PONTO")
   print("="*30)
   t.sleep(1)
   os.system('cls')
@@ -118,7 +119,7 @@ def lose():
   print("="*30)
   print("\t RESPOSTA ERRADA!")
   print("="*30)
-  print(f"NÃO GANHASTE NEHUM PONTO NESTA PERGUNTA.")
+  print(f"         0 PONTOS")
   print("="*30)
   t.sleep(1.5)
   os.system('cls')
@@ -130,13 +131,14 @@ op_menu = "S"
 
 while op_menu in ("s","S","Sim","sim"):
   os.system('cls')
+  os.system('color 0F')
   #----
   print("="*25)
   print("=      MENU INICIAL     =")
   print("="*25)
   print("= 1 |  JOGO DO ADVINHA  =")
   print("="*25)
-  print("= 2 |  QUIZ INFORMATICA =")
+  print("= 2 |  QUIZ PROGRAMAÇÃO =")
   print("="*25)
   print("= 3 | ADVINHE A TABUADA =")
   print("="*25)
@@ -177,87 +179,108 @@ while op_menu in ("s","S","Sim","sim"):
     #----
 
     print("Bem vindo ao quiz!")
+    print("Neste Quiz terás que responder perguntas sobre programação em contexto geral.")
+    t.sleep(1.5)
+    print("Boa Sorte !")
+
+    inpu = str(input("Pressione (ENTER) para começar:"))
+
+    os.system('cls')
     op_game_2 = "s"
     pontos = 0 
+    rodada = 0
     while op_game_2 in("s","S","sim","SIM","Sim"):
-      #----- pergunta 1
-      print("Qual é a linguagem de programação mais utilizada?")
-      questao_1 = int(input("1 - JAVASCRIPT \n2 - JAVA \n3 - PYTHON \n:"))
-      if questao_1 == 1:
-        pontos += 1
-        win()
-      else:
-        lose()
-      #-----
-
-      #----- pergunta 2
-      os.system('cls')
-      print("Oque é essecial para desenvolvimento Web?")
-      questao_2 = int(input("1 - PYTHON \n2 - CSS \n3 - HTML \n:"))  
-      if questao_2 == 2 or 3:
+      while rodada <6:
+        #----- pergunta 1
         os.system('cls')
-        pontos += 1
-        win()
+        print("Qual é a linguagem de programação mais utilizada?")
+        questao_1 = int(input("1 - JAVASCRIPT \n2 - JAVA \n3 - PYTHON \n:"))
+        if questao_1 == 1:
+          pontos += 1
+          rodada += 1
+          win()
+        else:
+          rodada += 1
+          lose()
+        #-----
 
-      else:
-        lose()
-      #----- 
+        #----- pergunta 2
+        os.system('cls')
+        print("Oque é essecial para desenvolvimento Web?")
+        questao_2 = int(input("1 - PYTHON \n2 -  C# \n3 - HTML \n:"))  
+        if questao_2 == 3:
+          os.system('cls')
+          pontos += 1
+          rodada += 1
+          win()
+        else:
+          rodada += 1
+          lose()
+        #----- 
 
-      #----- pergunta 3
-      print("Qual é a linguagem mais antiga?")
-      questao_3 = int(input("1 - ASSEMBLY \n2 - LINGUAGEM C \n3 - LINGUAGEM C++ \n:"))
-      if questao_3 == 1:
-        pontos += 1
-        win()
+        #----- pergunta 3
+        print("Qual é a linguagem mais antiga?")
+        questao_3 = int(input("1 - ASSEMBLY \n2 - LINGUAGEM C \n3 - LINGUAGEM C++ \n:"))
+        if questao_3 == 1:
+          pontos += 1
+          win()
 
-      else:
-        lose()
-      #-----
+        else:
+          rodada += 1
+          lose()
+        #-----
 
-      #----- pergunta 4 
-      print("Qual é a linguagem mais utilizada em desevolvimento de jogos?")
-      questao_4 = int(input("1 - C# \n2 - PYTHON \n3 - C++ \n:"))
-      if questao_4 == 3:
-        pontos += 1
-        win()
+        #----- pergunta 4 
+        print("Qual é a linguagem mais utilizada em desevolvimento de jogos?")
+        questao_4 = int(input("1 - C# \n2 - PYTHON \n3 - C++ \n:"))
+        if questao_4 == 3:
+          pontos += 1
+          rodada += 1
+          win()
 
-      else:
-        lose()
-      #-----
+        else:
+          rodada += 1
+          lose()
+        #-----
 
-      #-----
-      print("="*25)
-      print("PERGUNTA FINAL!")
-      print("="*25)
-      t.sleep(1.2)
-      os.system('cls')
-      #-----
+        #-----
+        print("="*25)
+        print("   PERGUNTA FINAL!")
+        print("="*25)
+        t.sleep(1.2)
+        os.system('cls')
+        #-----
 
-      #----- pergunta 5
-      print("Qual é a linguagem mais facíl de se aprender?")
-      questao_5 = int(input("1 - C# \n2 - JAVASCRIPT \n3 - PYTHON \n:"))
-      if questao_5 == 3:
-        pontos += 1
-        win()
-        break
+        #----- pergunta 5
+        print("Qual é a linguagem mais facíl de se aprender?")
+        questao_5 = int(input("1 - C# \n2 - JAVASCRIPT \n3 - PYTHON \n:"))
+        if questao_5 == 3:
+          pontos += 1
+          win()
+          break
 
-      else:
-        lose()
-        break
+        else:
+          lose()
+          break
       #-----
 
     #------  
-    os.system("cls")
-    print("="*30)
-    print("\t FIM DO QUIZ!")
-    print("="*30)
-    print(f"GANHASTE {pontos} NESTE QUIZ!")
-    print("="*30)
-    t.sleep(2)
-    print("JOGUE COM OS TEUS AMIGOS E VEJA VOSSA PONTUAÇÃO!")
-    t.sleep(2)
+      os.system("cls")
+      print("="*30)
+      print("\t FIM DO QUIZ!")
+      print("="*30)
+      print(f"    GANHASTE {pontos} NESTE QUIZ!")
+      print("="*30)
+      t.sleep(2)
+      print("JOGUE COM OS TEUS AMIGOS E VEJA VOSSA PONTUAÇÃO!")
+      t.sleep(2)
     #------
 
+    #-----
+      os.system('cls')
+      print("Deseja Reiniciar o jogo ?")  
+      op_game_2 = input("Sim | Não: ") 
+    #-----
     #------
     os.system('cls')
     input("Pressione (ENTER) para voltar ao menu:")
@@ -315,17 +338,17 @@ while op_menu in ("s","S","Sim","sim"):
       resposta = int(input("Qual é a tabuada apresentada?: "))
       if resposta == tb_alea:
         os.system('cls')
-        print("="*30)
-        print("\t PARABÉNS ACERTASTE!!")
-        print("="*30)
-        print(f"A TABUADA ERA DO {tb_alea}")
-        print("="*30)
+        print("="*28)
+        print("    PARABÉNS ACERTASTE!!")
+        print("="*28)
+        print(f"    A TABUADA ERA DO {tb_alea}")
+        print("="*28)
       else:
         os.system('cls')
         print("="*30)
         print("\t GAME OVER =/")
         print("="*30)
-        print(f"A TABUADA ERA A {tb_alea}")
+        print(f"     A TABUADA ERA A {tb_alea}")
         print("="*30)
 
       print("Deseja Reiniciar o jogo ?")  
