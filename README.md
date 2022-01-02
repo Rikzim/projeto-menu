@@ -6,11 +6,11 @@
 
 ![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
 # Projeto Menu de Jogos 🎮
-Este projeto têm como fim aprender mais sobre mecanismos de controle em programação **Python**.
+Este projeto têm como desenvolvimento aprender mais sobre mecanismos de controle em programação **Python**.
 
 # Como funciona?
-Foi desenvolvido exclusivamente em **Python** para fins escolares 
-e tem como função mostrar **3** diferentes jogo no qual o utilizador pode usar  no programa foraum usado as seguintes funções:
+Foi desenvolvido exclusivamente em **Python** para fins educacionais 
+e tem como função mostrar **3** diferentes jogo no qual o utilizador pode escolher qual jogar. No programa foram usado as seguintes funções:
 
 
 - Função **For**
