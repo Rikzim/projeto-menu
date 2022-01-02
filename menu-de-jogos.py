@@ -337,10 +337,3 @@ while op_menu in ("s","S","Sim","sim"):
     input("Pressione (ENTER) para voltar ao menu:")
     os.system('cls')
     #----
-  else:
-    os.system('cls')
-    print("ERRO =/ ")
-    print("Voltando ao menu inicial")
-    t.sleep(2)
-    os.system('cls')
-    #--------
