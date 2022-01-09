@@ -151,7 +151,7 @@ while op_menu in ("s","S","Sim","sim"):
     jogo_advinha()
   if op == 2:
     #----
-    os.system('color 09')
+    os.system('color 08')
     os.system('cls')
     for i in range (3):
       print("="*25)
