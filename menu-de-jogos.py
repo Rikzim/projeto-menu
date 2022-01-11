@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # @author Rikzim
 
 # Bibliotecas utilizadas
@@ -13,26 +15,33 @@ def jogo_advinha():
     #----
     os.system('cls')
     for i in range (3):
-      print("="*30)
-      print("\tJOGO DO ADVINHA")
-      print("="*30)
-      print("\tCarregando.")
+      print("="*25)
+      print("     JOGO DA ADVINHA")
+      print("="*25)
+      print("\t■□□□")
       t.sleep(0.5)
       os.system('cls')
 
       
-      print("="*30)
-      print("\tJOGO DO ADVINHA")
-      print("="*30)
-      print("\tCarregando..")
+      print("="*25)
+      print("     JOGO DA ADVINHA")
+      print("="*25)
+      print("\t□■□□")
       t.sleep(0.5)
       os.system('cls')
 
       
-      print("="*30)
-      print("\tJOGO DO ADVINHA")
-      print("="*30)
-      print("\tCarregando...")
+      print("="*25)
+      print("     JOGO DA ADVINHA")
+      print("="*25)
+      print("\t□□■□")
+      t.sleep(0.5)
+      os.system('cls')
+
+      print("="*25)
+      print("     JOGO DA ADVINHA")
+      print("="*25)
+      print("\t□□□■")
       t.sleep(0.5)
       os.system('cls')
     #----  
@@ -133,17 +142,18 @@ while op_menu in ("s","S","Sim","sim"):
   os.system('cls')
   os.system('color 0F')
   #----
-  print("="*25)
-  print("=      MENU INICIAL     =")
-  print("="*25)
-  print("= 1 |  JOGO DO ADVINHA  =")
-  print("="*25)
-  print("= 2 |  QUIZ PROGRAMAÇÃO =")
-  print("="*25)
-  print("= 3 | ADVINHE A TABUADA =")
-  print("="*25)
+  print("━"*26)
+  print("┃      MENU INICIAL      ┃")
+  print("━"*26)
+  print ('┃ 1 ┃''\033[31m'+'  JOGO DA ADVINHA   '+'\033[0;0m''┃')
+  print("━"*26)
+  print ('┃ 2 ┃''\033[34m'+'  QUIZ PROGRAMAÇÃO  '+'\033[0;0m''┃')
+  print("━"*26)
+  print ('┃ 3 ┃''\033[35m'+'  ADVINHE A TABUADA '+'\033[0;0m''┃')
+  print("━"*26)
   #----
   op = int(input("Insira o Jogo que deseja jogar: "))
+  
   #----
 
   if op == 1:
@@ -151,29 +161,36 @@ while op_menu in ("s","S","Sim","sim"):
     jogo_advinha()
   if op == 2:
     #----
-    os.system('color 08')
+    os.system('color 09')
     os.system('cls')
     for i in range (3):
       print("="*25)
-      print("     QUIZ INFORMATICA")
+      print("     QUIZ PROGRAMAÇÃO")
       print("="*25)
-      print("\tCarregando.")
+      print("\t■□□□")
       t.sleep(0.5)
       os.system('cls')
 
       
       print("="*25)
-      print("     QUIZ INFORMATICA")
+      print("     QUIZ PROGRAMAÇÃO")
       print("="*25)
-      print("\tCarregando..")
+      print("\t□■□□")
       t.sleep(0.5)
       os.system('cls')
 
       
       print("="*25)
-      print("     QUIZ INFORMATICA")
+      print("     QUIZ PROGRAMAÇÃO")
       print("="*25)
-      print("\tCarregando...")
+      print("\t□□■□")
+      t.sleep(0.5)
+      os.system('cls')
+
+      print("="*25)
+      print("     QUIZ PROGRAMAÇÃO")
+      print("="*25)
+      print("\t□□□■")
       t.sleep(0.5)
       os.system('cls')
     #----
@@ -292,23 +309,32 @@ while op_menu in ("s","S","Sim","sim"):
     os.system('cls')
     for i in range (3):
       print("="*25)
-      print("    ADVINHE A TABUADA")
+      print("     ADVINHE A TABUADA")
       print("="*25)
-      print("\tCarregando.")
+      print("\t■□□□")
+      t.sleep(0.5)
+      os.system('cls')
+
+      
+      print("="*25)
+      print("     ADVINHE A TABUADA")
+      print("="*25)
+      print("\t□■□□")
+      t.sleep(0.5)
+      os.system('cls')
+
+      
+      print("="*25)
+      print("     ADVINHE A TABUADA")
+      print("="*25)
+      print("\t□□■□")
       t.sleep(0.5)
       os.system('cls')
 
       print("="*25)
-      print("    ADVINHE A TABUADA")
+      print("     ADVINHE A TABUADA")
       print("="*25)
-      print("\tCarregando..")
-      t.sleep(0.5)
-      os.system('cls')
-
-      print("="*25)
-      print("    ADVINHE A TABUADA")
-      print("="*25)
-      print("\tCarregando...")
+      print("\t□□□■")
       t.sleep(0.5)
       os.system('cls')
     #----
@@ -360,3 +386,8 @@ while op_menu in ("s","S","Sim","sim"):
     input("Pressione (ENTER) para voltar ao menu:")
     os.system('cls')
     #----
+
+
+
+else:
+  op_menu = "S"
