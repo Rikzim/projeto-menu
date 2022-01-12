@@ -64,7 +64,7 @@ def jogo_advinha():
     while  op in ("S","SIM","s","Sim","sim"):
       tentativa = 1
       num_alea = r.randint(0,20)
-      while tentativa < 6:
+      while tentativa < 6 :
         num = int(input("Insira o número no qual estou pensando: "))
         if num == num_alea:
           os.system('cls')
@@ -79,7 +79,7 @@ def jogo_advinha():
           tentativa +=1 
         elif num < num_alea:
           print("O número no qual inseriu é menor!")
-          tentativa +=1
+          tentativa +=1  
           
     #-----
 
@@ -152,14 +152,14 @@ while op_menu in ("s","S","Sim","sim"):
   print ('┃ 3 ┃''\033[35m'+'  ADVINHE A TABUADA '+'\033[0;0m''┃')
   print("━"*26)
   #----
-  op = int(input("Insira o Jogo que deseja jogar: "))
+  op = input("Insira o Jogo que deseja jogar: ")
   
   #----
 
-  if op == 1:
+  if op == "1":
     os.system('color 0C')
     jogo_advinha()
-  if op == 2:
+  if op == "2":
     #----
     os.system('color 09')
     os.system('cls')
@@ -210,9 +210,9 @@ while op_menu in ("s","S","Sim","sim"):
       while rodada <6:
         #----- pergunta 1
         os.system('cls')
-        print("Qual é a linguagem de programação mais utilizada?")
-        questao_1 = int(input("1 - JAVASCRIPT \n2 - JAVA \n3 - PYTHON \n:"))
-        if questao_1 == 1:
+        print("Qual é a linguagem de programação mais utilizada? ")
+        questao_1 = input("1 - JAVASCRIPT \n2 - JAVA \n3 - PYTHON \n:")
+        if questao_1 == "1":
           pontos += 1
           rodada += 1
           win()
@@ -224,8 +224,8 @@ while op_menu in ("s","S","Sim","sim"):
         #----- pergunta 2
         os.system('cls')
         print("Oque é essecial para desenvolvimento Web?")
-        questao_2 = int(input("1 - PYTHON \n2 -  C# \n3 - HTML \n:"))  
-        if questao_2 == 3:
+        questao_2 = input("1 - PYTHON \n2 -  C# \n3 - HTML \n:")
+        if questao_2 == "3":
           os.system('cls')
           pontos += 1
           rodada += 1
@@ -237,8 +237,8 @@ while op_menu in ("s","S","Sim","sim"):
 
         #----- pergunta 3
         print("Qual é a linguagem mais antiga?")
-        questao_3 = int(input("1 - ASSEMBLY \n2 - LINGUAGEM C \n3 - LINGUAGEM C++ \n:"))
-        if questao_3 == 1:
+        questao_3 = input("1 - ASSEMBLY \n2 - LINGUAGEM C \n3 - LINGUAGEM C++ \n:")
+        if questao_3 == "1":
           pontos += 1
           win()
 
@@ -249,8 +249,8 @@ while op_menu in ("s","S","Sim","sim"):
 
         #----- pergunta 4 
         print("Qual é a linguagem mais utilizada em desevolvimento de jogos?")
-        questao_4 = int(input("1 - C# \n2 - PYTHON \n3 - C++ \n:"))
-        if questao_4 == 3:
+        questao_4 = input("1 - C# \n2 - PYTHON \n3 - C++ \n:")
+        if questao_4 == "3":
           pontos += 1
           rodada += 1
           win()
@@ -270,8 +270,8 @@ while op_menu in ("s","S","Sim","sim"):
 
         #----- pergunta 5
         print("Qual é a linguagem mais facíl de se aprender?")
-        questao_5 = int(input("1 - C# \n2 - JAVASCRIPT \n3 - PYTHON \n:"))
-        if questao_5 == 3:
+        questao_5 = input("1 - C# \n2 - JAVASCRIPT \n3 - PYTHON \n:")
+        if questao_5 == "3":
           pontos += 1
           win()
           break
@@ -303,7 +303,7 @@ while op_menu in ("s","S","Sim","sim"):
     input("Pressione (ENTER) para voltar ao menu:")
     os.system('cls')
     #------    
-  if op == 3:
+  if op == "3":
     #----
     os.system('color 0D')
     os.system('cls')
@@ -361,7 +361,7 @@ while op_menu in ("s","S","Sim","sim"):
         print(f"? * {i} =", tb_alea*i)
         t.sleep(0.8)
 
-      resposta = int(input("Qual é a tabuada apresentada?: "))
+      resposta = input("Qual é a tabuada apresentada?: ")
       if resposta == tb_alea:
         os.system('cls')
         print("="*28)
