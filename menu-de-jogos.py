@@ -9,7 +9,7 @@ import os
 import sys as s 
 import random as r
 
-# funções
+#-------- funções
 
 def jogo_advinha():
     #----
@@ -102,16 +102,85 @@ def jogo_advinha():
     os.system('cls')
 #-------------
 def loading():
-  for i in range (3):
-    print("Carregando.")
-    t.sleep(0.5)
+  for i in range (1):
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■□□□□□□□□□")
+    t.sleep(0.4)
     os.system('cls')
-    print("Carregando..")
-    t.sleep(0.5)
+    
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■■□□□□□□□□")
+    t.sleep(0.4)
     os.system('cls')
-    print("Carregando...")
-    t.sleep(0.5)
-    os.system('cls')   
+
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■■■□□□□□□□")
+    t.sleep(0.4)
+    os.system('cls')
+
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■■■■□□□□□□")
+    t.sleep(0.4)
+    os.system('cls')
+
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■■■■■□□□□□")
+    t.sleep(0.4)
+    os.system('cls')
+
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■■■■■■□□□□")
+    t.sleep(0.4)
+    os.system('cls')
+
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■■■■■■■□□□")
+    t.sleep(0.4)
+    os.system('cls')
+
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■■■■■■■■□□")
+    t.sleep(0.4)
+    os.system('cls')
+
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■■■■■■■■■□")
+    t.sleep(0.4)
+    os.system('cls')
+
+    print("━"*26)
+    print("┃      Feito por         ┃")
+    print("┃      Henrik Dambros    ┃")
+    print("━"*26)
+    print("■■■■■■■■■■")
+    t.sleep(0.4)
 #-------------
 def win():
   os.system("cls")
@@ -134,8 +203,13 @@ def lose():
   os.system('cls')
 #------------
 
+#--------- tela de apresentação
+loading()
+input("Prima qualquer tecla para começar o programa...")
+#---------
 
-# codigo todo
+
+#------- codigo todo
 op_menu = "S"
 
 while op_menu in ("s","S","Sim","sim"):
