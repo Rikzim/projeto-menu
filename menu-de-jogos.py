@@ -10,7 +10,7 @@ import sys as s
 import random as r
 
 #-------- funções
-
+print("pergunta 3 da Ficha 4")
 def jogo_advinha():
     #----
     os.system('cls')
